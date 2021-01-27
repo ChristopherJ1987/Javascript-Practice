@@ -31,10 +31,9 @@
 
         // your code...
         // function farenheitToCelsius(fTemp) {
-        //     cTemp = (fTemp - 32) * 5/9
-        //     return cTemp
+        //     return cTemp = ((fTemp - 32) * 5/9)
         // }
-        // console.log(farenheitToCelsius(14))
+        // console.log(farenheitToCelsius(64))
 
 
 
@@ -46,8 +45,7 @@
 
         //your code...
         // function celsiusToFarenheit(cTemp) {
-        //     fTemp = (cTemp * 9/5) +32
-        //     return fTemp
+        //     return fTemp = ((cTemp * 9/5) + 32)
         // }
         // console.log(celsiusToFarenheit(-10))
 
@@ -171,7 +169,7 @@
 
         // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
 
-        // 20
+        // console.log(!!20 ? "truthy" : "falsey")
         // 0
         // "zero";
         // const zero = 20;
