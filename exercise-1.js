@@ -4,8 +4,23 @@
         // Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
         //your code...
-        function tekCamp() {}
-        // tekCamp();
+        function tekCamp() {
+            for(let i = 1; i <= 100; i++) {
+                if(i%15 == 0) {
+                    console.log("TEKcamp");
+                }
+                else if(i%3 == 0) {
+                    console.log("TEK");
+                }
+                else if(i%5 == 0) {
+                    console.log("camp");
+                }
+                else {
+                    console.log(i);
+                }
+            }
+        }
+        tekCamp();
 
 
 
@@ -13,9 +28,9 @@
         //Write a function that converts the current temperature from Fahrenheit to Celsius. 
 
         //your code...
-        function farenheitCelsius() {
+        // function farenheitCelsius() {
 
-        }
+        // }
 
 
 
@@ -24,9 +39,9 @@
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
 
         //your code...
-        function celsiusFarenheit() {
+        // function celsiusFarenheit() {
 
-        }
+        // }
 
 
 
@@ -36,9 +51,9 @@
         // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
 
         //your code...
-        function canVote(age) {
-            return false;
-        }
+        // function canVote(age) {
+        //     return false;
+        // }
 
 
 
@@ -50,9 +65,9 @@
         // Write a function that converts a string to an array. It should return an array.  
 
         //your code...
-        function strToArr() {
-            return [];
-        }
+        // function strToArr() {
+        //     return [];
+        // }
 
 
 
@@ -64,9 +79,9 @@
         // Write a function that reverses your telephone number.  It should return the reversed telephone number.
 
         //your code...
-        function reversePhone(number) {
+        // function reversePhone(number) {
             
-        }
+        // }
 
 
 
@@ -96,7 +111,7 @@
 
 
         /************************************************************************************/
-        const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+        // const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
         // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
 
         //your code...
@@ -104,10 +119,10 @@
 
 
         /************************************************************************************/
-        const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
+        // const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
-        const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
+        // const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
         // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 
 
@@ -115,9 +130,9 @@
         // Refactor the for() loop to be a while loop.
 
 
-        for(let i=0; i<10; i++) {
+        // for(let i=0; i<10; i++) {
             // console.log(" the value of i in the loop is : " + i);
-        }
+        // }
 
 
         //your code...
@@ -156,39 +171,39 @@
         /************************************************************* */
         // Refactor the following code using a switch statement:
 
-        const day = "friday";
+        // const day = "friday";
 
-        if(day === "monday") {
-            console.log("we got a long week ahead of us...");
-        } else if(day === "tuesday") {
-            console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-        } else if (day === "wednesday") {
-            console.log("We are smack dab in the middle of the week");
-        } else if (day === "thursday") {
-            console.log("Thursday night... the mood is right");
-        } else if (day === "friday") {
-            console.log("TGIF.  Friday truly is the best day of the week!")
-        } else {
-            console.log("It's a weekend!")
-        }
+        // if(day === "monday") {
+        //     console.log("we got a long week ahead of us...");
+        // } else if(day === "tuesday") {
+        //     console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+        // } else if (day === "wednesday") {
+        //     console.log("We are smack dab in the middle of the week");
+        // } else if (day === "thursday") {
+        //     console.log("Thursday night... the mood is right");
+        // } else if (day === "friday") {
+        //     console.log("TGIF.  Friday truly is the best day of the week!")
+        // } else {
+        //     console.log("It's a weekend!")
+        // }
 
 
 
         /************************************************************* */
         // Refactor the following statements to use ternary expressions:
 
-        const age = 10;
-        if (age > 21) console.log("adult"); else {
-            console.log("minor");
-        }
+        // const age = 10;
+        // if (age > 21) console.log("adult"); else {
+        //     console.log("minor");
+        // }
 
-        if (age > 13 && age < 19) console.log('teen'); else {
-            console.log("not a teenager");
-        };
+        // if (age > 13 && age < 19) console.log('teen'); else {
+        //     console.log("not a teenager");
+        // };
 
-        if (age > 65) console.log("retired"); else {
-            console.log("still working...");
-        }
+        // if (age > 65) console.log("retired"); else {
+        //     console.log("still working...");
+        // }
 
 
         /************************************************************* */
@@ -213,42 +228,42 @@
 
         /************************************************************* */
 
-        {
-            const year = 2021;
-            const nums = [1,2,3,4,5];
-            let sum = 0;
-            let i = 0;
-            const doubled = [];
+        // {
+        //     const year = 2021;
+        //     const nums = [1,2,3,4,5];
+        //     let sum = 0;
+        //     let i = 0;
+        //     const doubled = [];
 
             //Refactor the following statements into expressions
 
 
             // 1.
-            if(year > 2000 && year < 2100) {
-                console.log("welcome to the 21st century");
-            }
+            // if(year > 2000 && year < 2100) {
+            //     console.log("welcome to the 21st century");
+            // }
             
             // 2.
-            for(let i=0; i<nums.length; i++) {
-                sum += nums[i];
-            }
-            console.log(sum);
+            // for(let i=0; i<nums.length; i++) {
+            //     sum += nums[i];
+            // }
+            // console.log(sum);
             
             
             // 3.
-            while(i < nums.length) {
-                doubled.push(nums[i]*2);
-                i++;
-            }
+        //     while(i < nums.length) {
+        //         doubled.push(nums[i]*2);
+        //         i++;
+        //     }
             
-            console.log(doubled);
-        }
+        //     console.log(doubled);
+        // }
 
 
         /************************************************************* */
         // Use array methods to solve the following problems.
 
-        const nums = [1,2,3,4,5];
+        // const nums = [1,2,3,4,5];
         // Square every number in the array.  Store the squares in a new array.
 
         //your code...
@@ -257,7 +272,7 @@
 
 
 
-        const fivePlus = [1,3,5,7,9,1,3,5,2,3,1,23,4,232,3,4,1,2,2,2,3,4,4,1,12,11,23,3,4,5];
+        // const fivePlus = [1,3,5,7,9,1,3,5,2,3,1,23,4,232,3,4,1,2,2,2,3,4,4,1,12,11,23,3,4,5];
         //Remove all numbers that are less than 5.  Store the results in a new array.
 
         //your code...
@@ -275,7 +290,7 @@
 
 
 
-        const showNums = [12,22,33,44,55,66,77,88,99,101];
+        // const showNums = [12,22,33,44,55,66,77,88,99,101];
         //Print out the value of each number divided by 2.  There is no need to store the output in an array.
 
 
@@ -294,16 +309,16 @@
 
         */
 
-        function chessCalc(pieces) {
+        // function chessCalc(pieces) {
             //your code here
-        }
+        // }
 
 
 
 
         /************************************************************* */
 
-        const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+        // const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
         //reverse the array, without modifying / `mutating` the ones array.
 
 
@@ -311,75 +326,75 @@
         /************************************************************* */
         //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
-        function performer(cb) {
+        // function performer(cb) {
             //code goes here
-        }
+        // }
 
 
         /************************************************************* */
         // For the given list of developers : 
-        const devs = [
-            {
-                name: 'Cameron',
-                age: 23,
-                gender: 'm',
-                "tech_stack" : ['html','css','js','React']
-            },
-            {
-                name: 'Liz',
-                age: 20,
-                gender: 'f',
-                "tech_stack" : ['java','spring-boot','MySql']
-            },
-            {
-                name: 'Chris',
-                age: 102,
-                gender: 'm',
-                "tech_stack" : ['react','express','python']
-            },
-            {
-                name: 'Rashid',
-                age: 27,
-                gender: 'm',
-                "tech_stack" : ['thymeleaf','postgres','js','Angular']
-            },
-            {
-                name: 'Annie',
-                age: 30,
-                gender: 'F',
-                "tech_stack" : ['html','scss','less','DynamoDB','GraphQL']
-            },
-            {
-                name: 'Dr. Patel',
-                age: 52,
-                gender: 'M',
-                "tech_stack" : null
-            },
-            {
-                name: 'Isaiah',
-                age: 48,
-                gender: 'M',
-                "tech_stack" : ['Java','','less','DynamoDB','GraphQL']
-            },
-            {
-                name: 'Saima',
-                age: 33,
-                gender: 'F',
-                "tech_stack" : ['MongoDB','Route53','Jenkins','Terraform','Kubernetes']
-            },
-            {
-                name: 'Omar',
-                age: 33,
-                gender: 'm',
-                "tech_stack" : ['c++']
-            },
-            {
-                name: 'Mariam',
-                age: 32,
-                gender: 'f',
-                "tech_stack" : null
-            },
-        ];
+        // const devs = [
+        //     {
+        //         name: 'Cameron',
+        //         age: 23,
+        //         gender: 'm',
+        //         "tech_stack" : ['html','css','js','React']
+        //     },
+        //     {
+        //         name: 'Liz',
+        //         age: 20,
+        //         gender: 'f',
+        //         "tech_stack" : ['java','spring-boot','MySql']
+        //     },
+        //     {
+        //         name: 'Chris',
+        //         age: 102,
+        //         gender: 'm',
+        //         "tech_stack" : ['react','express','python']
+        //     },
+        //     {
+        //         name: 'Rashid',
+        //         age: 27,
+        //         gender: 'm',
+        //         "tech_stack" : ['thymeleaf','postgres','js','Angular']
+        //     },
+        //     {
+        //         name: 'Annie',
+        //         age: 30,
+        //         gender: 'F',
+        //         "tech_stack" : ['html','scss','less','DynamoDB','GraphQL']
+        //     },
+        //     {
+        //         name: 'Dr. Patel',
+        //         age: 52,
+        //         gender: 'M',
+        //         "tech_stack" : null
+        //     },
+        //     {
+        //         name: 'Isaiah',
+        //         age: 48,
+        //         gender: 'M',
+        //         "tech_stack" : ['Java','','less','DynamoDB','GraphQL']
+        //     },
+        //     {
+        //         name: 'Saima',
+        //         age: 33,
+        //         gender: 'F',
+        //         "tech_stack" : ['MongoDB','Route53','Jenkins','Terraform','Kubernetes']
+        //     },
+        //     {
+        //         name: 'Omar',
+        //         age: 33,
+        //         gender: 'm',
+        //         "tech_stack" : ['c++']
+        //     },
+        //     {
+        //         name: 'Mariam',
+        //         age: 32,
+        //         gender: 'f',
+        //         "tech_stack" : null
+        //     },
+        // ];
 
         /************************** */  
         // Find all devs older than 24
@@ -448,17 +463,17 @@
 
         /************************************************************* */
         // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
-        const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
+        // const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
-        function maxNumber(numbers) {
+        // function maxNumber(numbers) {
             //your code...
-        }
+        // }
 
         //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
-        function sortNums(numbers,desc=false) {
+        // function sortNums(numbers,desc=false) {
             //your code...
-        };
+        // };
 
 
 
@@ -473,10 +488,10 @@
         /************************************************************* */
         //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
-        const mapObj = new Map();
-        mapObj.set({company : "TEKsystems"},"object");
+        // const mapObj = new Map();
+        // mapObj.set({company : "TEKsystems"},"object");
 
-        console.log(mapObj.has({company : "TEKsystems"}));
+        // console.log(mapObj.has({company : "TEKsystems"}));
 
         //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
@@ -490,8 +505,8 @@
         //Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly selects one of the mathematical operations whenever it is invoked.  The doMath() function should print to the console the mathetmatical function that was carried out.  The doMath() function should return the computed value of any operation performed.
 
         // ex : 2,3 => doMath(2,3) => adding : 5
-        const operations = [];
-        function doMath(x,y) {};
+        // const operations = [];
+        // function doMath(x,y) {};
 
         //your code...
 
@@ -515,10 +530,10 @@
 
 
 // DO NOT DELETE THIS EXPORT
-module.exports = {
-    tekCamp,
-    canVote
-}
+// module.exports = {
+//     tekCamp,
+//     canVote
+// }
 
 
 //*************************************** */
