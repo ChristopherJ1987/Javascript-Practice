@@ -57,11 +57,16 @@
 
         /************************************************************************************/
         // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
+        /***************************************COMPLETE************************************/ 
 
         //your code...
         // function canVote(age) {
-        //     return false;
+        //     if(age >= 18) {
+        //         return true;
+        //     }
+        //     else return false;
         // }
+        // console.log(canVote(4));
 
 
 
@@ -71,11 +76,14 @@
 
         /************************************************************************************/
         // Write a function that converts a string to an array. It should return an array.  
+        /***************************************COMPLETE************************************/ 
 
         //your code...
-        // function strToArr() {
-        //     return [];
+        // function strToArr(str) {
+        //     const newArr = Array.from(str);
+        //     return newArr;
         // }
+        // console.log(strToArr("Christopher"));
 
 
 
@@ -85,11 +93,14 @@
 
         /************************************************************************************/
         // Write a function that reverses your telephone number.  It should return the reversed telephone number.
+        /***************************************COMPLETE************************************/ 
 
-        //your code...
+        // your code...
         // function reversePhone(number) {
-            
+        //     const reversedNumber = number + "";
+        //     return reversedNumber.split("").reverse().join("");
         // }
+        // console.log(reversePhone(4693456789))
 
 
 
