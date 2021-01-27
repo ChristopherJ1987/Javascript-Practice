@@ -2,46 +2,54 @@
 
         /************************************************************************************/
         // Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
+        /***************************************COMPLETE************************************/ 
 
         //your code...
-        function tekCamp() {
-            for(let i = 1; i <= 100; i++) {
-                if(i%15 == 0) {
-                    console.log("TEKcamp");
-                }
-                else if(i%3 == 0) {
-                    console.log("TEK");
-                }
-                else if(i%5 == 0) {
-                    console.log("camp");
-                }
-                else {
-                    console.log(i);
-                }
-            }
-        }
-        tekCamp();
+        // function tekCamp() {
+        //     for(let i = 1; i <= 100; i++) {
+        //         if(i%15 == 0) {
+        //             console.log("TEKcamp");
+        //         }
+        //         else if(i%3 == 0) {
+        //             console.log("TEK");
+        //         }
+        //         else if(i%5 == 0) {
+        //             console.log("camp");
+        //         }
+        //         else {
+        //             console.log(i);
+        //         }
+        //     }
+        // }
+        // tekCamp();
 
 
 
         /************************************************************************************/
         //Write a function that converts the current temperature from Fahrenheit to Celsius. 
+        /***************************************COMPLETE************************************/ 
 
-        //your code...
-        // function farenheitCelsius() {
-
+        // your code...
+        // function farenheitToCelsius(fTemp) {
+        //     cTemp = (fTemp - 32) * 5/9
+        //     return cTemp
         // }
+        // console.log(farenheitToCelsius(14))
 
 
 
 
         /************************************************************************************/
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
+        /***************************************COMPLETE************************************/ 
+
 
         //your code...
-        // function celsiusFarenheit() {
-
+        // function celsiusToFarenheit(cTemp) {
+        //     fTemp = (cTemp * 9/5) +32
+        //     return fTemp
         // }
+        // console.log(celsiusToFarenheit(-10))
 
 
 
