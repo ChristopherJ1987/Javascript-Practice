@@ -148,6 +148,7 @@
         /************************************************************************************/
         // const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
+        /***************************************COMPLETE************************************/ 
         
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         let lastElement = foodArray[foodArray.length -1];
@@ -156,6 +157,22 @@
 
         // const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
         // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
+        const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
+        const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
+        function iterateArrs(foodArray, adjectiveArray) {
+            for(let i = 0; i < foodArray.length; i++) {
+                if( i == 6) {
+                    console.log(foodArray[i].program + " is " + adjectiveArray[i] + ".");
+                }
+                else if(foodArray[i].endsWith('s')) {
+                    console.log(foodArray[i] + " are " + adjectiveArray[i] + ".");
+                }
+                else {
+                    console.log(foodArray[i] + " is " + adjectiveArray[i] + ".");
+                }
+            }
+        }
+        iterateArrs(foodArray, adjectiveArray);
 
 
         /***********************************************************************************/
@@ -311,15 +328,22 @@
         // }
 
 
-        /************************************************************* */
+        /********************************************************************************* */
         // Use array methods to solve the following problems.
+        /***************************************COMPLETE************************************/ 
 
         // const nums = [1,2,3,4,5];
         // Square every number in the array.  Store the squares in a new array.
 
         //your code...
-
-
+        const nums = [1,2,3,4,5];
+        function square(arr) {
+            return arr.map(function (x) {
+                return x ** 2;
+                // return Math.pow(x, 2);
+            });
+        }
+        console.log(square(nums));
 
 
 
