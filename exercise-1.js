@@ -148,30 +148,54 @@
         /************************************************************************************/
         // const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
+        
+        const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
+        let lastElement = foodArray[foodArray.length -1];
+        var school = lastElement;
+        console.log(school);
 
         // const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
         // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 
 
-        /************************************************************* */
+        /***********************************************************************************/
         // Refactor the for() loop to be a while loop.
-
+        /***************************************COMPLETE************************************/ 
 
         // for(let i=0; i<10; i++) {
             // console.log(" the value of i in the loop is : " + i);
         // }
 
-
         //your code...
+        let i = 0;
+        while(i < 10) {
+            i++;
+            console.log(" the value of i in the loop is: " + i);
+        }
 
 
 
 
-        /************************************************************* */
+        /********************************************************************************** */
         //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
         //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
+        /***************************************COMPLETE************************************/ 
+
 
         //your code...
+        function add(int, num) {
+            return sum = int + num;
+        }
+        function multiply(sum, int) {
+            return product = sum * int;
+        }
+        function divide(product, num, int) {
+            return cloven = ((product / num) ^ int);
+        }
+
+        console.log(add(30, 2));
+        console.log(multiply(sum, 20));
+        console.log(divide(product, 10, 2));
 
 
         /************************************************************* */
