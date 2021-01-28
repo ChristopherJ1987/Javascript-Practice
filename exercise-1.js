@@ -108,12 +108,20 @@
         /***************************************COMPLETE************************************/ 
 
         //your code...
-        function car(make, model, year, color) {
-            return arguments;
+        function createCar() {
+            var car = {
+                make: "a",
+                model: "b",
+                year: "c",
+                color: "d"
+            }
         }
-        console.log(car("Dodge", "Ram 1500", "2016", "Graphite"));
-
-
+        var newCar = new createCar;
+        newCar.make = "Dodge";
+        newCar.model = "Ram";
+        newCar.year = "2016";
+        newCar.color = "Graphite";
+        console.log(newCar);
 
 
 
@@ -346,12 +354,24 @@
         console.log(square(nums));
 
 
-
+        /********************************************************************************* */
         // const fivePlus = [1,3,5,7,9,1,3,5,2,3,1,23,4,232,3,4,1,2,2,2,3,4,4,1,12,11,23,3,4,5];
         //Remove all numbers that are less than 5.  Store the results in a new array.
+        /***************************************COMPLETE************************************/ 
 
         //your code...
-
+        const fivePlus = [1,3,5,7,9,1,3,5,2,3,1,23,4,232,3,4,1,2,2,2,3,4,4,1,12,11,23,3,4,5];
+        function lessThanFive(arr) {
+            let newArr = [];
+            for(let i = 0; i < arr.length; i++) {
+                if(arr[i] > 5) {
+                    newArr.push(arr[i]);
+                    continue;
+                }
+            }
+            return newArr;
+        }
+        console.log(lessThanFive(fivePlus));
 
 
 
