@@ -5,23 +5,23 @@
         /***************************************COMPLETE************************************/ 
 
         //your code...
-        // function tekCamp() {
-        //     for(let i = 1; i <= 100; i++) {
-        //         if(i%15 == 0) {
-        //             console.log("TEKcamp");
-        //         }
-        //         else if(i%3 == 0) {
-        //             console.log("TEK");
-        //         }
-        //         else if(i%5 == 0) {
-        //             console.log("camp");
-        //         }
-        //         else {
-        //             console.log(i);
-        //         }
-        //     }
-        // }
-        // tekCamp();
+        function tekCamp() {
+            for(let i = 1; i <= 100; i++) {
+                if(i%15 == 0) {
+                    console.log("TEKcamp");
+                }
+                else if(i%3 == 0) {
+                    console.log("TEK");
+                }
+                else if(i%5 == 0) {
+                    console.log("camp");
+                }
+                else {
+                    console.log(i);
+                }
+            }
+        }
+        tekCamp();
 
 
 
@@ -30,10 +30,10 @@
         /***************************************COMPLETE************************************/ 
 
         // your code...
-        // function farenheitToCelsius(fTemp) {
-        //     return cTemp = ((fTemp - 32) * 5/9)
-        // }
-        // console.log(farenheitToCelsius(64))
+        function farenheitToCelsius(fTemp) {
+            return cTemp = ((fTemp - 32) * 5/9)
+        }
+        console.log(farenheitToCelsius(64))
 
 
 
@@ -44,10 +44,10 @@
 
 
         //your code...
-        // function celsiusToFarenheit(cTemp) {
-        //     return fTemp = ((cTemp * 9/5) + 32)
-        // }
-        // console.log(celsiusToFarenheit(-10))
+        function celsiusToFarenheit(cTemp) {
+            return fTemp = ((cTemp * 9/5) + 32)
+        }
+        console.log(celsiusToFarenheit(-10))
 
 
 
@@ -58,13 +58,13 @@
         /***************************************COMPLETE************************************/ 
 
         //your code...
-        // function canVote(age) {
-        //     if(age >= 18) {
-        //         return true;
-        //     }
-        //     else return false;
-        // }
-        // console.log(canVote(4));
+        function canVote(age) {
+            if(age >= 18) {
+                return true;
+            }
+            else return false;
+        }
+        console.log(canVote(4));
 
 
 
@@ -76,12 +76,11 @@
         // Write a function that converts a string to an array. It should return an array.  
         /***************************************COMPLETE************************************/ 
 
-        //your code...
-        // function strToArr(str) {
-        //     const newArr = Array.from(str);
-        //     return newArr;
-        // }
-        // console.log(strToArr("Christopher"));
+        // your code...
+        function strToArr(str) {
+            return newArr = Array.from(str);
+        }
+        console.log(strToArr("Christopher"));
 
 
 
@@ -94,11 +93,11 @@
         /***************************************COMPLETE************************************/ 
 
         // your code...
-        // function reversePhone(number) {
-        //     const reversedNumber = number + "";
-        //     return reversedNumber.split("").reverse().join("");
-        // }
-        // console.log(reversePhone(4693456789))
+        function reversePhone(number) {
+            const reversedNumber = number + "";
+            return reversedNumber.split("").reverse().join("");
+        }
+        console.log(reversePhone(4693456789))
 
 
 
@@ -106,9 +105,13 @@
 
         /************************************************************************************/
         // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
+        /***************************************COMPLETE************************************/ 
 
         //your code...
-
+        function car(make, model, year, color) {
+            return arguments;
+        }
+        console.log(car("Dodge", "Ram 1500", "2016", "Graphite"));
 
 
 
@@ -130,8 +133,15 @@
         /************************************************************************************/
         // const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
         // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
+        /***************************************COMPLETE************************************/ 
 
         //your code...
+        const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+        for(let i = 0; i < numbers.length; i++) {
+            if(i % 3 === 0) {
+                console.log(i);
+            }
+        }
 
 
 
