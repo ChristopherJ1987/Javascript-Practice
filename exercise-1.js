@@ -240,27 +240,29 @@
         console.log(divide(product, exponent));
 
 
-        /***************************************************************/
+        /************************************************************************************/
         //13. Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation values : 
+        /***************************************COMPLETE************************************/ 
 
         // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
 
         console.log(`${!!20 ? "truthy" : "falsey"} , because it is a positive non-zero number`);
         console.log(`${!!0 ? "truthy" : "falsey"} , because it is a zero number`);
         console.log(`${!!"zero" ? "truthy" : "falsey"} , because it is a defined and non-empty string`);
-        const zero = 20;
         console.log(`${!!zero ? "truthy" : "falsey"} , because it is a positive non-zero number, and a pre-defined variable`);
-        // this one was intense : /
+        // this one was so intense : it has two outcomes/
         console.log((!!`() => {console.log("hello TEKcamp!")` ? "truthy" : "falsy") + " functions are truthy.");
         console.log(`() => {console.log("hello TEKcamp!"); is ${!!(() => {console.log("hello TEKcamp!");})}. Functions are always truthy.`);
-        
-        // null
-        // "0"
-        // !""
-        // {}
-        // 125
-        // undefined
-        // ""
+        // this one was so intense : it has two outcomes/
+        console.log(`${!!null ? "truthy" : "falsey"} , because it is a single null value`);
+        console.log(`${!!"0" ? "truthy" : "falsey"} , because it is a string containing a single zero`)
+        console.log(`${!!!"" ? "truthy" : "falsey"} , because it is`);
+        console.log(`${!!{} ? "truthy" : "falsey"} , because it is an empty object`);
+        console.log(`${!!125 ? "truthy" : "falsey"} , because it is`);
+        console.log(`${!!undefined ? "truthy" : "falsey"} , because undefined is always falsey`);
+        console.log(`${!!"" ? "truthy" : "falsey"} , because it is an empty string`);
+
+
 
 
 
