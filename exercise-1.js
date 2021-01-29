@@ -66,7 +66,8 @@
 
         // your code...
         function strToArr(str) {
-            return newArr = Array.from(str);
+            let newArr = Array.from(str);
+            return newArr 
         }
         console.log(strToArr("Christopher"));
 
@@ -264,20 +265,20 @@
         // }
         const age = 10;
         (age > 21 ? console.log("adult") : console.log("minor"));
-
         // if (age > 13 && age < 19) console.log('teen'); else {
         //     console.log("not a teenager");
         // };
         (age > 13 && age < 19 ? console.log("teen") : console.log("not a teenager"));
-
         // if (age > 65) console.log("retired"); else {
         //     console.log("still working...");
         // }
         (age > 65 ? console.log("retired") : console.log("still working..."));
 
 
-        /***************************************************************/
+        /************************************************************************************/
         //16. Create an object literal representing yourself.  Set it equal to a variable that appropriately describes the object.  Include the following properties:
+        /***************************************COMPLETE*************************************/ 
+
         /*
         -name
         -age
@@ -286,16 +287,23 @@
         -hobbies
         -profession
         -education
-
         -16. (a) Add a method on your object, entitled 'learn'.  The learn method should print out the message : "[your name] is learning JavaScript".  The learn method should print the value of the name property using the 'this' keyword.
-
         -16.(b) Add another method on your object of any action you want to perform, using some property that exists on your object.  Make sure to reference any properties on your object using the 'this' keyword.
         */
-
         //your code...
-
-
-
+        let alien = new Object();
+        alien.name = "Christopher";
+        alien.age = 33;
+        alien.gender = "unknown";
+        alien.healthy = "absolutely not";
+        alien.hobbies = ["listening to music", "watching movies", "coloring hair"];
+        alien.profession = "professional bootcamper";
+        alien.education = "a little of this, and a little of that."
+        alien.learn = function() { console.log(alien.name + " is learning JavaScript.") };
+        alien.speak = function() { console.log(this.name + " is a " + this.profession + ".")};
+        console.log(alien);
+        alien.learn();
+        alien.speak();
         
         
         /************************************************************************************/
@@ -414,10 +422,14 @@
 
 
         
-        /***************************************************************/
+        /***********************************************************************************/
         // const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
         //23. reverse the array, without modifying / `mutating` the ones array.
+        /***************************************COMPLETE************************************/ 
 
+        const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+        let newArr = ones.slice().reverse();
+        console.log(newArr);
 
 
         /***************************************************************/
@@ -560,6 +572,7 @@
 
         /************************************************************* */
         //26. Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
+        
         // const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
         // function maxNumber(numbers) {
