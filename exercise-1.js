@@ -212,10 +212,10 @@
 
 
 
-        /********************************************************************************** */
+        /************************************************************************************/
         //12. Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
         //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
-        /***************************************COMPLETE************************************/ 
+        /***************************************COMPLETE*************************************/ 
         
         // PEMDAS
         //your code...
@@ -296,21 +296,26 @@
 
 
 
-        /***************************************************************/
+        /***********************************************************************************/
         //15. Refactor the following statements to use ternary expressions:
+        /***************************************COMPLETE************************************/ 
 
         // const age = 10;
         // if (age > 21) console.log("adult"); else {
         //     console.log("minor");
         // }
+        const age = 10;
+        (age > 21 ? console.log("adult") : console.log("minor"));
 
         // if (age > 13 && age < 19) console.log('teen'); else {
         //     console.log("not a teenager");
         // };
+        (age > 13 && age < 19 ? console.log("teen") : console.log("not a teenager"));
 
         // if (age > 65) console.log("retired"); else {
         //     console.log("still working...");
         // }
+        (age > 65 ? console.log("retired") : console.log("still working..."));
 
 
         /***************************************************************/
@@ -335,36 +340,33 @@
 
         
         
-        /************************************************************* */
+        /************************************************************************************/
         //17. Refactor the following statements into expressions
-        
-        // {
-        //     const year = 2021;
-        //     const nums = [1,2,3,4,5];
-        //     let sum = 0;
-        //     let i = 0;
-        //     const doubled = [];
+        /***************************************COMPLETE*************************************/ 
 
-            // 1.
-            // if(year > 2000 && year < 2100) {
-            //     console.log("welcome to the 21st century");
-            // }
-            
-            // 2.
-            // for(let i=0; i<nums.length; i++) {
-            //     sum += nums[i];
-            // }
-            // console.log(sum);
-            
-            
-            // 3.
-        //     while(i < nums.length) {
-        //         doubled.push(nums[i]*2);
-        //         i++;
-        //     }
-            
-        //     console.log(doubled);
-        // }
+        
+        {
+        const year = 2021;
+        const nums = [1,2,3,4,5];
+        //1. if(year > 2000 && year < 2100) {
+        //     console.log("welcome to the 21st century");
+        //   }
+            (year > 2000 && year < 2100 ? console.log("Welcome to the 21st Century") : "");
+        //2. for(let i=0; i<nums.length; i++) {
+        //     sum += nums[i];
+        //   }
+        //   console.log(sum);
+            let sum = nums.reduce(function (accumulator, current) { return accumulator + current });
+            console.log(sum);
+        // 3. while(i < nums.length) {
+        //       doubled.push(nums[i]*2);
+        //       i++;
+        //    }
+        //    console.log(doubled);
+            let i = 0;
+            let doubled = nums.map(x => x * 2);
+            console.log(doubled);
+        }
 
 
         /***********************************************************************************/
@@ -421,6 +423,12 @@
         /***********************************************************************************/
         // const showNums = [12,22,33,44,55,66,77,88,99,101];
         //21. Print out the value of each number divided by 2.  There is no need to store the output in an array.
+        /***************************************COMPLETE************************************/ 
+
+        const showNums = [12,22,33,44,55,66,77,88,99,101];
+        let clovenByTwo = showNums.map(x => x / 2).toString();
+        console.log(clovenByTwo);
+
 
 
 
@@ -460,7 +468,7 @@
 
 
 
-        /************************************************************* */
+        /***************************************************************/
         //24. create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
         // function performer(cb) {
@@ -468,7 +476,7 @@
         // }
 
 
-        /************************************************************* */
+        /***************************************************************/
         //25. For the given list of developers : 
         // const devs = [
         //     {
