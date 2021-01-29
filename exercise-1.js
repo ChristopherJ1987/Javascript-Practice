@@ -24,7 +24,6 @@
         tekCamp();
 
 
-
         /************************************************************************************/
         //2. Write a function that converts the current temperature from Fahrenheit to Celsius. 
         /***************************************COMPLETE************************************/ 
@@ -36,21 +35,15 @@
         console.log(farenheitToCelsius(64))
 
 
-
-
         /************************************************************************************/
         //3. Write a function that converts the Celsius temperature back to Fahrenheit. 
         /***************************************COMPLETE************************************/ 
-
 
         //your code...
         function celsiusToFarenheit(cTemp) {
             return fTemp = ((cTemp * 9/5) + 32)
         }
         console.log(celsiusToFarenheit(-10))
-
-
-
 
 
         /************************************************************************************/
@@ -67,11 +60,6 @@
         console.log(canVote(4));
 
 
-
-
-
-
-
         /************************************************************************************/
         //5. Write a function that converts a string to an array. It should return an array.  
         /***************************************COMPLETE************************************/ 
@@ -81,11 +69,6 @@
             return newArr = Array.from(str);
         }
         console.log(strToArr("Christopher"));
-
-
-
-
-
 
 
         /************************************************************************************/
@@ -98,9 +81,6 @@
             return reversedNumber.split("").reverse().join("");
         }
         console.log(reversePhone(4693456789))
-
-
-
 
 
         /************************************************************************************/
@@ -124,13 +104,11 @@
         console.log(newCar);
 
 
-
         /************************************************************************************/
         //8. Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
         /***************************************COMPLETE************************************/ 
 
         //example : [10,23,3,4] => function() => {10 : 'even', 23 : 'odd', 3 : 'odd', 4 : 'even'}
-
         //your code...
         function listNumber(arr) {
             for(let i = 0; i < arr.length; i++) {
@@ -143,10 +121,6 @@
             }
         }
         listNumber([10,23,3,4]);
-
-
-
-
 
 
         /************************************************************************************/
@@ -163,7 +137,6 @@
         }
 
 
-
         /************************************************************************************/
         // const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //10.(a) Access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
@@ -176,7 +149,6 @@
 
         // const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
         //10.(b) Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
-        const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
         function iterateArrs(x, y) {
             for(let i = 0; i < foodArray.length; i++) {
@@ -201,15 +173,12 @@
         // for(let i=0; i<10; i++) {
             // console.log(" the value of i in the loop is : " + i);
         // }
-
         //your code...
         let i = 0;
         while(i < 10) {
             i++;
             console.log(" the value of i in the loop is: " + i);
         }
-
-
 
 
         /************************************************************************************/
@@ -219,7 +188,6 @@
         
         // PEMDAS
         //your code...
-        
         function add(int, num) {
             return sum = int + num;
         }
@@ -232,8 +200,6 @@
         function divide(num, int) {
             return cloven = (product / exponent);
         }
-
-
         console.log(add(30, 2));
         console.log(exp(10));
         console.log(multiply(sum, 20));
@@ -245,11 +211,9 @@
         /***************************************COMPLETE************************************/ 
 
         // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
-
         console.log(`${!!20 ? "truthy" : "falsey"} , because it is a positive non-zero number`);
         console.log(`${!!0 ? "truthy" : "falsey"} , because it is a zero number`);
         console.log(`${!!"zero" ? "truthy" : "falsey"} , because it is a defined and non-empty string`);
-        console.log(`${!!zero ? "truthy" : "falsey"} , because it is a positive non-zero number, and a pre-defined variable`);
         // this one was so intense : it has two outcomes/
         console.log((!!`() => {console.log("hello TEKcamp!")` ? "truthy" : "falsy") + " functions are truthy.");
         console.log(`() => {console.log("hello TEKcamp!"); is ${!!(() => {console.log("hello TEKcamp!");})}. Functions are always truthy.`);
@@ -263,16 +227,11 @@
         console.log(`${!!"" ? "truthy" : "falsey"} , because it is an empty string`);
 
 
-
-
-
-
         /***********************************************************************************/
         //14. Refactor the following code using a switch statement:
         /***************************************COMPLETE************************************/ 
 
         const day = "Saturday";
-
         switch(day) {
             case "Monday":
                 console.log("we got a long week ahead of us...");
@@ -293,7 +252,6 @@
                 console.log("It's a weekend!");
                 break;
         }
-
 
 
         /***********************************************************************************/
@@ -343,7 +301,6 @@
         /************************************************************************************/
         //17. Refactor the following statements into expressions
         /***************************************COMPLETE*************************************/ 
-
         
         {
         const year = 2021;
@@ -375,7 +332,6 @@
 
         // const nums = [1,2,3,4,5];
         // Square every number in the array.  Store the squares in a new array.
-
         //your code...
         const nums = [1,2,3,4,5];
         function square(arr) {
@@ -407,8 +363,6 @@
         console.log(lessThanFive(fivePlus));
 
 
-
-
         /***********************************************************************************/
         //20. Create an array of 20 randomly generated integers.  Calculate the sum of the elements in the array.
         /***************************************COMPLETE************************************/ 
@@ -428,8 +382,6 @@
         const showNums = [12,22,33,44,55,66,77,88,99,101];
         let clovenByTwo = showNums.map(x => x / 2).toString();
         console.log(clovenByTwo);
-
-
 
 
         /***************************************************************/
@@ -673,12 +625,10 @@
         //your code...
 
 
-
+//*************************************** */
 // DO NOT DELETE THIS EXPORT
 // module.exports = {
 //     tekCamp,
 //     canVote
 // }
-
-
 //*************************************** */
