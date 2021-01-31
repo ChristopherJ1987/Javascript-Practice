@@ -432,104 +432,128 @@
         console.log(newArr);
 
 
-        /***************************************************************/
+        /***********************************************************************************/
         //24. create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
+        /***************************************COMPLETE************************************/ 
 
-        // function performer(cb) {
-            //code goes here
-        // }
+        function performer(callbackFunction) {
+            callbackFunction();
+        }
+        performer(() => 3 + 3 === 44 ? console.log("You don't know math.") : console.log("You still don't know math."));
 
 
         /***************************************************************/
         //25. For the given list of developers : 
-        // const devs = [
-        //     {
-        //         name: 'Cameron',
-        //         age: 23,
-        //         gender: 'm',
-        //         "tech_stack" : ['html','css','js','React']
-        //     },
-        //     {
-        //         name: 'Liz',
-        //         age: 20,
-        //         gender: 'f',
-        //         "tech_stack" : ['java','spring-boot','MySql']
-        //     },
-        //     {
-        //         name: 'Chris',
-        //         age: 102,
-        //         gender: 'm',
-        //         "tech_stack" : ['react','express','python']
-        //     },
-        //     {
-        //         name: 'Rashid',
-        //         age: 27,
-        //         gender: 'm',
-        //         "tech_stack" : ['thymeleaf','postgres','js','Angular']
-        //     },
-        //     {
-        //         name: 'Annie',
-        //         age: 30,
-        //         gender: 'F',
-        //         "tech_stack" : ['html','scss','less','DynamoDB','GraphQL']
-        //     },
-        //     {
-        //         name: 'Dr. Patel',
-        //         age: 52,
-        //         gender: 'M',
-        //         "tech_stack" : null
-        //     },
-        //     {
-        //         name: 'Isaiah',
-        //         age: 48,
-        //         gender: 'M',
-        //         "tech_stack" : ['Java','','less','DynamoDB','GraphQL']
-        //     },
-        //     {
-        //         name: 'Saima',
-        //         age: 33,
-        //         gender: 'F',
-        //         "tech_stack" : ['MongoDB','Route53','Jenkins','Terraform','Kubernetes']
-        //     },
-        //     {
-        //         name: 'Omar',
-        //         age: 33,
-        //         gender: 'm',
-        //         "tech_stack" : ['c++']
-        //     },
-        //     {
-        //         name: 'Mariam',
-        //         age: 32,
-        //         gender: 'f',
-        //         "tech_stack" : null
-        //     },
-        // ];
+        const devs = [
+            {
+                name: 'Cameron',
+                age: 23,
+                gender: 'm',
+                "tech_stack" : ['html','css','js','React']
+            },
+            {
+                name: 'Liz',
+                age: 20,
+                gender: 'f',
+                "tech_stack" : ['java','spring-boot','MySql']
+            },
+            {
+                name: 'Chris',
+                age: 102,
+                gender: 'm',
+                "tech_stack" : ['react','express','python']
+            },
+            {
+                name: 'Rashid',
+                age: 27,
+                gender: 'm',
+                "tech_stack" : ['thymeleaf','postgres','js','Angular']
+            },
+            {
+                name: 'Annie',
+                age: 30,
+                gender: 'F',
+                "tech_stack" : ['html','scss','less','DynamoDB','GraphQL']
+            },
+            {
+                name: 'Dr. Patel',
+                age: 52,
+                gender: 'M',
+                "tech_stack" : null
+            },
+            {
+                name: 'Isaiah',
+                age: 48,
+                gender: 'M',
+                "tech_stack" : ['Java','','less','DynamoDB','GraphQL']
+            },
+            {
+                name: 'Saima',
+                age: 33,
+                gender: 'F',
+                "tech_stack" : ['MongoDB','Route53','Jenkins','Terraform','Kubernetes']
+            },
+            {
+                name: 'Omar',
+                age: 33,
+                gender: 'm',
+                "tech_stack" : ['c++']
+            },
+            {
+                name: 'Mariam',
+                age: 32,
+                gender: 'f',
+                "tech_stack" : null
+            },
+        ];
 
-        /************************** */  
+        /****************************/  
         //25.(a) Find all devs older than 24
 
         //your code here...
+        for(let i = 0; i < devs.length; i++) {
+            if(devs[i].age > 24) {
+                console.log(devs[i].name);
+            }
+        }
 
-
-
-        /************************** */  
+        /****************************/  
         //25.(b) Remove all people who are not developers (i.e. no tech stack)
 
         //your code here...
-
-
+        // this does not do what i need it to do yet ... i somehow need to remove the devs from the devs array ... : /
+        // let notDevelopers = [];
+        // for(let i = 0; i < devs.length; i ++) {
+        //     if(devs[i].tech_stack === null) {
+        //         notDevelopers.push(devs[i]);
+        //         devs.slice(devs[i]);
+        //     }
+        // }
+        // console.log(notDevelopers);
+        // console.log(devs);
 
         /************************** */  
         //25.(c) Calculate the total age of all the devs
 
         //your code here...
-
+        let totalAge = 0;
+        for(let i = 0; i < devs.length; i ++) {
+            totalAge += devs[i].age;
+        }
+        console.log(totalAge);
 
 
         /************************** */  
         //25.(d) Find all female devs
 
         //your code here...
+        let femaleDevs = [];
+        for(let i = 0; i < devs.length; i++) {
+            if(devs[i].gender == "F" || devs[i].gender == "f") {
+                femaleDevs.push(devs[i]);
+            }
+        }
+        console.log(femaleDevs);
 
 
         /************************** */  
@@ -579,7 +603,7 @@
             //your code...
         // }
 
-        //26.(b) After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
+        //26.(a) After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
         // function sortNums(numbers,desc=false) {
             //your code...
