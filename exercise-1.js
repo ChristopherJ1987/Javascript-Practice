@@ -594,21 +594,57 @@
         //your code here
 
 
-        /************************************************************* */
-        //26. Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
+        /***********************************************************************************/
+        //26. Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task. 
+        /***************************************COMPLETE************************************/ 
         
-        // const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
+        const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
+        
 
-        // function maxNumber(numbers) {
-            //your code...
-        // }
+        let numbers = [];
+        for(let i = 0; i < numbersMixed.length; i ++) {
+            if(typeof numbersMixed[i] == "number") {
+                numbers.push(numbersMixed[i]);
+            }
+            else if(numbersMixed[i] == "one") {
+                numbers.push(1);
+            }
+            else if(numbersMixed[i] == "two") {
+                numbers.push(2);
+            }
+            else if(numbersMixed[i] == "three" || numbersMixed[i] == "3") {
+                numbers.push(3);
+            }
+        }
+        console.log(numbers);
+
+        
+        function maxNumber(numbers) {
+            let max = 0;
+            for(let i = 0; i < numbers.length; i++) {
+                if(numbers[i] > max) {
+                    max = numbers[i];
+                }
+            }
+            return max;
+        }
+        console.log(maxNumber(numbers));
+
 
         //26.(a) After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
-        // function sortNums(numbers,desc=false) {
-            //your code...
-        // };
-
+        function sortNums(arr) {
+            for(let i = arr.length; i > 0; i--) {
+                for(let j = 0; j < arr.length; j++) {
+                    if(arr[j] > arr[j + 1]) {
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                    }
+                }
+            }
+            return arr;
+        };
+        console.log(sortNums(numbers));
+        console.log(sortNums(numbers).reverse());
 
 
         /************************************************************* */
