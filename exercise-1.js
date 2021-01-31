@@ -392,34 +392,38 @@
         console.log(clovenByTwo);
 
 
-        /***************************************************************/
+        /******************************************************************************************/
         /*22. Chess pieces have point values associated with them.  
+        /***************************************HALF - COMPLETE************************************/ 
 
-        Pawn = 1, Rook = 5, Bishop = 3, Knight = 3, Queen = 9, King = N/A 
+        // Pawn = 1, Rook = 5, Bishop = 3, Knight = 3, Queen = 9, King = N/A 
 
-        Write a function that calculates the total point value of any given input list of Chess pieces.  
-        ex : ['king','queen','pawn','pawn','pawn','bishop'] => chessCalc() => 15
+        // Write a function that calculates the total point value of any given input list of Chess pieces.  
+        // ex : ['king','queen','pawn','pawn','pawn','bishop'] => chessCalc() => 15
 
-        If there are invalid chess pieces, discard those elements.
-        ex : ['iPhone','queen','pawn'] => chessCalc() => 10
-        ['android'] => chessCalc() => null
-
-        */
+        // If there are invalid chess pieces, discard those elements.
+        // ex : ['iPhone','queen','pawn'] => chessCalc() => 10
+        // ['android'] => chessCalc() => null
 
         //your code here
-        // var chessPieces = {
-        //     pawn: 1,
-        //     rook: 5,
-        //     bishop: 3,
-        //     knight: 3,
-        //     queen: 9,
-        //     king: null,
-        // }
-        // function chessCalc(pieces) {
-            
-        // }
-        // chessCalc(pawn);
-
+        let totalPoints = 0;
+        let pawn = 1;
+        let rook = 5;
+        let bishop = 3;
+        let knight = 3;
+        let queen = 9;
+        let king = null;
+        function chessCalc(arr) {
+            for(let i = 0; i < arr.length; i ++) {
+                console.log(typeof(arr[i]));
+                if(typeof arr[i] == "number") {
+                    totalPoints += arr[i];
+                }
+            }
+            return totalPoints
+        }
+        console.log(chessCalc([king, queen, pawn, pawn, pawn, bishop]));
+        // console.log(chessCalc([king, queen, pawn, pawn, pawn, bishop, android]));
 
         
         /***********************************************************************************/
@@ -439,11 +443,13 @@
         function performer(callbackFunction) {
             callbackFunction();
         }
-        performer(() => 3 + 3 === 44 ? console.log("You don't know math.") : console.log("You still don't know math."));
+        performer(() => 4 + 4 === 44 ? console.log("You don't know math.") : console.log("You still don't know math."));
 
 
-        /***************************************************************/
+        /***********************************************************************************/
         //25. For the given list of developers : 
+        /***************************************COMPLETE************************************/ 
+        
         const devs = [
             {
                 name: 'Cameron',
@@ -521,18 +527,11 @@
         //25.(b) Remove all people who are not developers (i.e. no tech stack)
 
         //your code here...
-        // this does not do what i need it to do yet ... i somehow need to remove the devs from the devs array ... : /
-        // let notDevelopers = [];
-        // for(let i = 0; i < devs.length; i ++) {
-        //     if(devs[i].tech_stack === null) {
-        //         notDevelopers.push(devs[i]);
-        //         devs.slice(devs[i]);
-        //     }
-        // }
-        // console.log(notDevelopers);
-        // console.log(devs);
+        // I'M NOT SURE THIS DOES WHAT I NEED IT TO DO, BUT I CANNOT FIGURE OUT HOW TO REMOVE THE DEVS WITHOUT CREATING A NEW ARRAY
+        let developers = devs.filter(dev => dev.tech_stack !== null);
+        console.log(developers);
 
-        /************************** */  
+        /****************************/  
         //25.(c) Calculate the total age of all the devs
 
         //your code here...
@@ -543,46 +542,69 @@
         console.log(totalAge);
 
 
-        /************************** */  
+        /****************************/  
         //25.(d) Find all female devs
 
         //your code here...
         let femaleDevs = [];
         for(let i = 0; i < devs.length; i++) {
             if(devs[i].gender == "F" || devs[i].gender == "f") {
-                femaleDevs.push(devs[i]);
+                femaleDevs.push(devs[i].name);
             }
         }
         console.log(femaleDevs);
 
 
-        /************************** */  
+        /****************************/  
         //25.(e) lowercase the genders of every dev
 
         //your code here...
+        function lowercaseGender(arr) {
+            for(let i = 0; i < devs.length; i++) {
+                arr[i].gender = arr[i].gender.toLowerCase();
+            }
+            return devs;
+        }
+        console.log(lowercaseGender(devs));
 
 
-
-        /************************** */  
+        /****************************/  
         //25.(d) Sort the developers by name
 
         //your code here
+        devs.sort(function(x, y) {
+            if(x.name < y.name) { return -1 }
+            if(x.name > y.name) { return 1 }
+            return 0;
+        })
+        console.log(devs);
 
 
-        /************************** */  
+        /****************************/  
         //25.(e) Sort the devs by age in descending order
 
         //your code here
+        devs.sort(function(x, y) {return y.age - x.age});
+        console.log(devs);
 
 
-
-        /************************** */  
+        /****************************/  
         //25.(f) Sort the male coders by age
 
         //your code here
+        let maleDevs = [];
+        function sortMalesByAge(arr) {
+            for(let i = 0; i < arr.length; i ++) {
+                if(devs[i].gender === "M" || devs[i].gender === "m") {
+                    maleDevs.push(arr[i]);
+                }
+            }
+            return maleDevs.sort(function(x, y) {return y.age - x.age});
+        }
+        console.log(sortMalesByAge(devs));
 
 
-        /************************** */  
+        /****************************/  
         //25.(g) For the list of devs, print out sentences including the name and tech stack of each dev, leaving out other information.  Example output is provided below : 
 
         /*
@@ -592,6 +614,17 @@
         */
 
         //your code here
+        function devStacks(arr) {
+            for(let i = 0; i < arr.length; i++) {
+                if(arr[i].tech_stack !== null){
+                    console.log(`${arr[i].name} specializes in ${arr[i].tech_stack}.`);
+                }
+                else {
+                    console.log(`${arr[i].name} is not a developer.`)
+                }
+            }
+        }
+        devStacks(devs);
 
 
         /***********************************************************************************/
@@ -600,7 +633,6 @@
         
         const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
         
-
         let numbers = [];
         for(let i = 0; i < numbersMixed.length; i ++) {
             if(typeof numbersMixed[i] == "number") {
@@ -619,9 +651,9 @@
         console.log(numbers);
 
 
-        function maxNumber(numbers) {
+        function maxNumber(arr) {
             let max = 0;
-            for(let i = 0; i < numbers.length; i++) {
+            for(let i = 0; i < arr.length; i++) {
                 if(numbers[i] > max) {
                     max = numbers[i];
                 }
@@ -652,6 +684,20 @@
 
 
             //your code...
+            // I think promises may be my favorite feature to come from JavaScript ES6. I just like the name promises. It gives me hope that if I include promises in my code, that my code promises me it'll run. Promises make wait times with requests easy and effortless with this type of asynchronous placeholder. When a certain task's completion time is too long or uncertain, a promise will create a placeholder for a future value to be placed, and your code will asynchrounously be allowed to continue running while you wait for the promises response.
+
+            // const myPrecious = new Promise((resolve, reject) => {
+            //     if(Math.random() * 5 >= 25) {
+            //         resolve("I promised I'd be back!");
+            //     }
+            //     reject(new Error("Even if I fail, I'll be back!"));
+            // });
+
+            // myPrecious.then((resolvedValue) => {
+            //     console.log(resolvedValue);
+            // }, (error) => {
+            //     console.log(error);
+            // });
 
 
 
