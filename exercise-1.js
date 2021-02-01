@@ -291,17 +291,21 @@
         -16.(b) Add another method on your object of any action you want to perform, using some property that exists on your object.  Make sure to reference any properties on your object using the 'this' keyword.
         */
         //your code...
-        let alien = new Object();
-        alien.name = "Christopher";
-        alien.age = 33;
-        alien.gender = "unknown";
-        alien.healthy = "absolutely not";
-        alien.hobbies = ["listening to music", "watching movies", "coloring hair"];
-        alien.profession = "professional bootcamper";
-        alien.education = "a little of this, and a little of that."
-        alien.learn = function() { console.log(alien.name + " is learning JavaScript.") };
-        alien.speak = function() { console.log(this.name + " is a " + this.profession + ".")};
-        console.log(alien);
+        const alien = {
+            name: "Christopher",
+            age: 33,
+            gender: "androgynous",
+            healthy: "absolutely not",
+            hobbies: ["listening to music", "watching movies", "coloring hair"],
+            profession: "professional bootcamper",
+            education: "a little of this, and a little of that",
+            learn: function() {
+                console.log(alien.name + " is learning JavaScript.")
+            },
+            speak: function() {
+                console.log(this.name + " is a " + this.profession + ".");
+            },
+        }
         alien.learn();
         alien.speak();
         
@@ -705,7 +709,7 @@
                 console.log("Promise was", e);
             }
         }
-        
+
         handlePromise();
 
 
