@@ -679,29 +679,37 @@
         console.log(sortNums(numbers).reverse());
 
 
-        /************************************************************* */
+        /***************************************************************/
         //27. Research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
 
 
-            //your code...
-            // I think promises may be my favorite feature to come from JavaScript ES6. I just like the name promises. It gives me hope that if I include promises in my code, that my code promises me it'll run. Promises make wait times with requests easy and effortless with this type of asynchronous placeholder. When a certain task's completion time is too long or uncertain, a promise will create a placeholder for a future value to be placed, and your code will asynchrounously be allowed to continue running while you wait for the promises response.
+        //your code...
+        // I think promises may be my favorite feature to come from JavaScript ES6. I like the name promises. This is not how a promise works necessarily, but it gives me hope to think that if I include promises in my code that my code promises me it'll run. Promises are objects that represent an intermediate state of an operation, they make wait times easy with an asynchronous placeholder. When a certain task's completion time is too long or uncertain, a promise creates a placeholder for a future value to be placed, and your code will asynchrounously be allowed to continue running while you wait for the response, whether it is resolved or rejected.
 
-            // const myPrecious = new Promise((resolve, reject) => {
-            //     if(Math.random() * 5 >= 25) {
-            //         resolve("I promised I'd be back!");
-            //     }
-            //     reject(new Error("Even if I fail, I'll be back!"));
-            // });
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const rand = Math.round(Math.random());
+                rand ? resolve("Resolved") : reject("Rejected");
+            }, 2000);
+        });
 
-            // myPrecious.then((resolvedValue) => {
-            //     console.log(resolvedValue);
-            // }, (error) => {
-            //     console.log(error);
-            // });
+        console.log(promise);
+        console.log("1 + 1 = 2");
+
+        async function handlePromise() {
+            try {
+                const response = await promise;
+                console.log(response);
+            }
+            catch(e) {
+                console.log("Promise was", e);
+            }
+        }
+        
+        handlePromise();
 
 
-
-        /************************************************************* */
+        /***************************************************************/
         //28. Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
         // const mapObj = new Map();
